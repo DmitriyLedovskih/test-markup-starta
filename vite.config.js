@@ -11,7 +11,7 @@ const SRC_PATH = path.resolve(__dirname, "src");
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, "img", "svg-sprite");
 
 export default defineConfig({
-  base: "https://github.com/DmitriyLedovskih/test-markup-starta/",
+  base: "https://github.com/DmitriyLedovskih/test-markup-starta/dist/",
   plugins: [
     createSvgSpritePlugin({
       svgFolder: SVG_FOLDER_PATH,

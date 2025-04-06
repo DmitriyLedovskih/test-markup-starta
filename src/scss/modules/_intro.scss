@@ -1,0 +1,200 @@
+.intro {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/src/img/intro-bg.jpg");
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  border-radius: var(--bdrs-70);
+
+  @include breakpoint(lg) {
+    border-radius: var(--bdrs-40);
+  }
+
+  @include breakpoint(bmd) {
+    padding-bottom: 24px;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(sm) {
+    padding-bottom: 32px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  &__content {
+    padding-top: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    @include breakpoint(bmd) {
+      padding-top: 190px;
+    }
+
+    @include breakpoint(sm) {
+      padding-top: 220px;
+    }
+  }
+
+  &__logo {
+    max-width: 806px;
+    width: 100%;
+    height: 297px;
+
+    @include breakpoint(exl) {
+      max-width: 576px;
+      height: 211px;
+    }
+
+    @include breakpoint(md) {
+      max-width: 464px;
+      height: 171px;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 325px;
+      height: 119px;
+    }
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: var(--fz-32);
+    color: var(--white-color);
+    margin: 0;
+    text-align: center;
+
+    @include breakpoint(exl) {
+      font-size: var(--fz-26);
+    }
+
+    @include breakpoint(md) {
+      font-size: var(--fz-20);
+    }
+
+    @include breakpoint(sm) {
+      font-size: var(--fz-18);
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    position: relative;
+    top: 100px;
+
+    @include breakpoint(elg) {
+      top: 75px;
+    }
+
+    @include breakpoint(bmd) {
+      top: 0;
+      margin-top: 76px;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: 100px;
+    }
+
+    &-wrapper {
+      display: flex;
+    }
+
+    &-pagination {
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 12px;
+      display: none;
+
+      @include breakpoint(bmd) {
+        display: flex;
+      }
+    }
+
+    &-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: var(--bg-bullet);
+      display: block;
+      border-radius: var(--bdrs-80);
+      flex-shrink: 0;
+
+      &--active {
+        background-color: var(--bg-bullet-active);
+        width: 30px;
+      }
+    }
+
+    &-slide {
+      box-sizing: border-box;
+    }
+
+    &-card {
+      backdrop-filter: blur(150px);
+      background-color: var(--grey-opacity-color);
+      color: var(--text-main-color);
+      border-radius: var(--bdrs-40);
+      padding: 32px;
+      transition: background-color 0.4s ease, color 0.4s ease;
+
+      @include breakpoint(elg) {
+        padding: var(--fz-16);
+      }
+
+      @include breakpoint(bmd) {
+        height: 130px;
+        display: grid;
+      }
+
+      &:hover {
+        background-color: var(--white-third-color);
+        color: var(--brown-color);
+      }
+    }
+
+    &-title {
+      font-size: var(--fz-48);
+      font-weight: bold;
+      margin: 0 0 26px 0;
+      white-space: nowrap;
+
+      @include breakpoint(exl) {
+        font-size: var(--fz-40);
+      }
+
+      @include breakpoint(elg) {
+        font-size: var(--fz-30);
+      }
+    }
+
+    &-text {
+      font-size: var(--fz-22);
+      line-height: var(--lh-26);
+      font-weight: 500;
+      margin: 0;
+      max-width: 260px;
+
+      @include breakpoint(exl) {
+        font-size: var(--fz-18);
+      }
+
+      @include breakpoint(bmd) {
+        max-width: 100%;
+        margin-top: auto;
+      }
+    }
+  }
+}

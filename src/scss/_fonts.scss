@@ -1,0 +1,59 @@
+@font-face {
+  font-display: swap;
+  font-family: "Gogh";
+  font-style: normal;
+  font-weight: 350;
+  src: url("../fonts/Gogh-Book.woff2") format("woff2"),
+    url("../fonts/Gogh-Book.woff") format("woff"),
+    url("../fonts/Gogh-Book.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Gogh";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Gogh-Regular.woff2") format("woff2"),
+    url("../fonts/Gogh-Regular.woff") format("woff"),
+    url("../fonts/Gogh-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Gogh";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Gogh-Medium.woff2") format("woff2"),
+    url("../fonts/Gogh-Medium.woff") format("woff"),
+    url("../fonts/Gogh-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Gogh";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Gogh-Bold.woff2") format("woff2"),
+    url("../fonts/Gogh-Bold.woff") format("woff"),
+    url("../fonts/Gogh-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FiraSans-Regular.woff2") format("woff2"),
+    url("../fonts/FiraSans-Regular.woff") format("woff"),
+    url("../fonts/FiraSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/FiraSans-Medium.woff2") format("woff2"),
+    url("../fonts/FiraSans-Medium.woff") format("woff"),
+    url("../fonts/FiraSans-Medium.ttf") format("ttf");
+}

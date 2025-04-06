@@ -1,0 +1,106 @@
+.contact {
+  background-image: url("/src/img/address-bg.jpg");
+  padding: 140px 0;
+
+  @include breakpoint(lg) {
+    padding: 84px 0;
+  }
+
+  &__title {
+    margin: 0 0 64px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 32px;
+
+    @include breakpoint(bmd) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 390px;
+    width: 100%;
+
+    @include breakpoint(bmd) {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: 500;
+    font-size: var(--fz-22);
+
+    @include breakpoint(exl) {
+      font-size: var(--fz-18);
+    }
+
+    @include breakpoint(bmd) {
+      font-size: var(--fz-16);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(bsm) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      background-color: var(--white-second-color);
+      padding: 12px 20px;
+      border-radius: var(--bdrs-30);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+
+      @include breakpoint(bmd) {
+        padding: 8px 12px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-text {
+      display: block;
+    }
+  }
+
+  &__map {
+    max-width: 830px;
+    width: 100%;
+    border-radius: var(--bdrs-40);
+
+    @include breakpoint(exl) {
+      max-width: 757px;
+    }
+
+    @include breakpoint(elg) {
+      max-width: 657px;
+    }
+
+    @include breakpoint(blg) {
+      max-width: 587px;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 521px;
+    }
+
+    @include breakpoint(bmd) {
+      max-width: 100%;
+      height: 332px;
+    }
+
+    @include breakpoint(bsm) {
+      height: 234px;
+    }
+  }
+}

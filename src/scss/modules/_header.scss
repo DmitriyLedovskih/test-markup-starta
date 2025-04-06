@@ -1,0 +1,121 @@
+.header {
+  &--absolute {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+
+    @include breakpoint(elg) {
+      top: 18px;
+    }
+  }
+
+  &__logo {
+    &--mobile {
+      display: none;
+
+      @include breakpoint(elg) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @include breakpoint(elg) {
+        display: none;
+      }
+    }
+  }
+
+  &__row {
+    min-height: 78px;
+    box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.251);
+    background-color: var(--white-color);
+    border-radius: var(--bdrs-160);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 30px;
+
+    @include breakpoint(elg) {
+      background-color: transparent;
+      box-shadow: none;
+      min-height: 56px;
+      padding: 0 12px;
+      border-radius: var(--bdrs-30);
+    }
+  }
+
+  &__menu,
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__menu {
+    &-link {
+      font-size: var(--fz-18);
+      font-weight: bold;
+      transition: background-color 0.4s ease;
+      padding: 5px 16px;
+      border-radius: var(--bdrs-50);
+
+      @include breakpoint(exl) {
+        font-size: var(--fz-16);
+      }
+
+      @include breakpoint(elg) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-text {
+      font-weight: 500;
+      font-size: var(--fz-18);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &--line {
+        @include breakpoint(elg) {
+          &::before {
+            background-color: var(--white-color);
+          }
+        }
+      }
+
+      @include breakpoint(exl) {
+        font-size: var(--fz-16);
+      }
+
+      @include breakpoint(elg) {
+        color: var(--white-color);
+      }
+
+      @include breakpoint(bmd) {
+        display: none;
+      }
+    }
+
+    &-icon {
+      fill: var(--brown-light-color);
+
+      @include breakpoint(exl) {
+        fill: var(--white-second-color);
+      }
+    }
+  }
+}

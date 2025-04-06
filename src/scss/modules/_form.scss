@@ -1,0 +1,181 @@
+.form {
+  background-image: url("/src/img/form-bg.jpg");
+  padding: 140px 0;
+
+  @include breakpoint(lg) {
+    padding: 84px 0;
+  }
+
+  &__title {
+    margin: 0 0 64px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__text {
+    font-size: var(--fz-22);
+    font-weight: 500;
+    color: var(--text-main-color);
+
+    @include breakpoint(elg) {
+      font-size: var(--fz-18);
+    }
+
+    @include breakpoint(bmd) {
+      font-size: var(--fz-16);
+    }
+  }
+
+  &__fields {
+    &-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 24px;
+
+      @include breakpoint(bmd) {
+        flex-direction: column;
+      }
+    }
+
+    &-label {
+      width: 100%;
+      max-width: 408px;
+
+      @include breakpoint(bmd) {
+        max-width: 100%;
+      }
+    }
+
+    &-text {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    &-field,
+    &-textarea {
+      background-color: var(--bg-input);
+      color: var(--text-main-color);
+      font-family: inherit;
+      font-weight: normal;
+      font-size: var(--fz-22);
+      border: none;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: var(--bdrs-20);
+      padding: 28px;
+
+      &--error {
+        color: var(--error-color);
+        background-color: var(--error-opacity-color);
+      }
+
+      &::placeholder {
+        color: var(--grey-color);
+      }
+
+      @include breakpoint(elg) {
+        font-size: var(--fz-18);
+      }
+
+      @include breakpoint(bmd) {
+        font-size: var(--fz-16);
+      }
+    }
+
+    &-error {
+      color: var(--error-color);
+      font-size: var(--fz-22);
+      font-weight: normal;
+      margin: 16px 0 0;
+
+      @include breakpoint(elg) {
+        font-size: var(--fz-18);
+      }
+
+      @include breakpoint(bmd) {
+        font-size: var(--fz-16);
+      }
+    }
+
+    &-field {
+      height: 78px;
+
+      @include breakpoint(bmd) {
+        height: 66px;
+      }
+    }
+
+    &-textarea {
+      resize: none;
+      height: 216px;
+
+      @include breakpoint(bmd) {
+        height: 256px;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 36px;
+
+      @include breakpoint(bsm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &-button {
+      background-color: var(--brown-color);
+      font-weight: bold;
+      color: var(--white-color);
+      border-radius: 90px;
+      max-width: 240px;
+      width: 100%;
+      height: 64px;
+      font-size: var(--fz-20);
+      flex-shrink: 0;
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        background-color: var(--brown-light-color);
+      }
+
+      @include breakpoint(bmd) {
+        max-width: 219px;
+      }
+
+      @include breakpoint(bsm) {
+        max-width: 182px;
+        height: 48px;
+        font-size: 16px;
+      }
+    }
+
+    &-descr {
+      font-size: var(--fz-18);
+      line-height: 1.2;
+      font-weight: normal;
+      margin: 0;
+      max-width: 586px;
+      font-family: var(--font-second);
+
+      @include breakpoint(exl) {
+        font-size: var(--fz-16);
+      }
+
+      @include breakpoint(bsm) {
+        font-size: var(--fz-14);
+      }
+    }
+
+    &-link {
+      text-decoration: underline;
+    }
+  }
+}

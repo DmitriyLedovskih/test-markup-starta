@@ -192,6 +192,21 @@
     height: 2px;
     background-color: var(--white-color);
     border-radius: 2px;
+    transition: transform 0.4s ease;
+  }
+
+  &--active {
+    &::before {
+      @include breakpoint(elg) {
+        transform: translateY(7px);
+      }
+    }
+
+    &::after {
+      @include breakpoint(elg) {
+        transform: translateY(-7px);
+      }
+    }
   }
 }
 

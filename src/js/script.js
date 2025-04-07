@@ -17,6 +17,14 @@ const init = async () => {
     if (window.scrollY > 500) buttonUp.classList.add("button-up--active");
     else buttonUp.classList.remove("button-up--active");
   });
+
+  const burger = document.querySelector(".burger");
+  const headerNav = document.querySelector(".header__nav");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("burger--active");
+    headerNav.classList.toggle("header__nav--active");
+  });
 };
 
 export default init;

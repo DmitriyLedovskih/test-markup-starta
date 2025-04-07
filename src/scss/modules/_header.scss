@@ -55,7 +55,32 @@
     gap: 8px;
   }
 
+  &__nav {
+    @include breakpoint(elg) {
+      position: fixed;
+      right: 20px;
+      top: 120%;
+      background-color: var(--white-third-color);
+      padding: 20px 10px;
+      border-radius: var(--bdrs-20);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-100px);
+      transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+      &--active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+
   &__menu {
+    @include breakpoint(elg) {
+      flex-direction: column;
+      gap: 12px;
+    }
+
     &-link {
       font-size: var(--fz-18);
       font-weight: bold;
@@ -65,10 +90,6 @@
 
       @include breakpoint(exl) {
         font-size: var(--fz-16);
-      }
-
-      @include breakpoint(elg) {
-        display: none;
       }
 
       &:hover {
